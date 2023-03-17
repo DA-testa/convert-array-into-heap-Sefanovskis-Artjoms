@@ -16,7 +16,7 @@ def build_heap(data):
             currentElement = data[currentElementIndex-1]
 
             if currentElement < parentElement:
-                currentElement, parentElement = parentElement,currentElement
+                data[currentElementIndex-1], data[currentElementIndex//2-1] = data[currentElementIndex//2-1],data[currentElementIndex-1]
                 swaps.append([currentElementIndex//2-1,currentElementIndex-1])
                 currentElementIndex = currentElementIndex//2
             else:
